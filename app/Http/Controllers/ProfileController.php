@@ -33,7 +33,6 @@ class ProfileController extends Controller
             }
         }
         
-        /*dd($items);*/
         return view('Lesson02.profile', ['items' => $items]);
     }
 }
