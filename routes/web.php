@@ -18,6 +18,7 @@ Route::get('/', function () {
 });
 
 /*
+ジャンケン
 http://localhost:8000/janken
 にアクセスすると、JankenControllerのbattle関数を実行する
 */
@@ -32,19 +33,21 @@ Route::get('/janken/paa', 'JankenController@paa');
 
 
 /*
+データベース
+ユーザー一覧表示
 http://localhost:8000/profile
 */
 Route::get('/profile', 'ProfileController@test');
 Route::post('/profile', 'ProfileController@test');
 
-/*
-http://localhost:8000/signup
-*/
+/*ユーザー新規登録*/
 Route::get('/signup', 'SignupController@index');
 Route::post('/signup', 'SignupController@add');
 
-/*
-http://localhost:8000/edit/
-*/
+/*ユーザー編集*/
 Route::get('/edit/{user_ID}', 'EditController@index');
 Route::post('/edit', 'EditController@edit');
+
+/*ユーザー削除*/
+Route::get('/delete/{user_ID}', 'DeleteController@index');
+Route::post('/delete', 'DeleteController@delete');

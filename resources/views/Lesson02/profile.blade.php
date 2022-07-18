@@ -48,6 +48,7 @@
       </ul>
       </td>
       <td><a href="/edit/{{ $user->user_ID }}">編集</a></td>
+      <td><a href="/delete/{{ $user->user_ID }}">削除</a></td>
     </tr>
     @endforeach
     </table>

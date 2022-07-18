@@ -34,14 +34,16 @@
 
     <form action="/edit" method="post">
     @csrf
-	  <p>名前（必須）：<br>
-	  <input type="text" value="{{ $user->user_Name }}" maxlength="15" name="edit_Name" required></p>
-	  <p>生年月日：<br>
-	  <input type="date" value="{{ $user->user_Birthday }}" max="<?php echo date('Y-m-d'); ?>" name="edit_Birthday"></p>
-    <p>特技名（3つまで）：<br>
-	  <input type="text" value="{{ isset($user->skill[0]) ? $user->skill[0]->skill_Name : '' }}" maxlength="25" name="edit_Skill[]"></p>
-    <input type="text" value="{{ isset($user->skill[1]) ? $user->skill[1]->skill_Name : '' }}" maxlength="25" name="edit_Skill[]"></p>
-    <input type="text" value="{{ isset($user->skill[2]) ? $user->skill[2]->skill_Name : '' }}" maxlength="25" name="edit_Skill[]"></p>
+	  名前（必須）：<br>
+	  <input type="text" value="{{ $user->user_Name }}" maxlength="15" name="edit_Name" required><br>
+    <br>
+	  生年月日：<br>
+	  <input type="date" value="{{ $user->user_Birthday }}" max="<?php echo date('Y-m-d'); ?>" name="edit_Birthday"><br>
+    <br>
+    特技名（3つまで）：<br>
+	  <input type="text" value="{{ isset($user->skill[0]) ? $user->skill[0]->skill_Name : '' }}" maxlength="25" name="edit_Skill[]"><br>
+    <input type="text" value="{{ isset($user->skill[1]) ? $user->skill[1]->skill_Name : '' }}" maxlength="25" name="edit_Skill[]"><br>
+    <input type="text" value="{{ isset($user->skill[2]) ? $user->skill[2]->skill_Name : '' }}" maxlength="25" name="edit_Skill[]"><br>
   	<p><input type="submit" value="決定"></p>
     <input type="hidden" value="{{ $user->user_ID }}" name="edit_hidden_ID">
     </form>

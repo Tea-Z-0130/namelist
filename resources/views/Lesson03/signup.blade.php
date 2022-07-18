@@ -34,14 +34,16 @@
 
     <form action="/signup" method="post">
     @csrf
-	  <p>名前（必須）：<br>
-	  <input type="text" maxlength="15" name="signup_Name" required></p>
-	  <p>生年月日：<br>
-	  <input type="date" max="<?php echo date('Y-m-d'); ?>" name="signup_Birthday"></p>
-    <p>特技名（3つまで）：<br>
-	  <input type="text" maxlength="25" name="signup_Skill[]"></p>
-    <input type="text" maxlength="25" name="signup_Skill[]"></p>
-    <input type="text" maxlength="25" name="signup_Skill[]"></p>
+	  名前（必須）：<br>
+	  <input type="text" maxlength="15" name="signup_Name" required><br>
+    <br>
+	  生年月日：<br>
+	  <input type="date" max="<?php echo date('Y-m-d'); ?>" name="signup_Birthday"><br>
+    <br>
+    特技名（3つまで）：<br>
+	  <input type="text" maxlength="25" name="signup_Skill[]"><br>
+    <input type="text" maxlength="25" name="signup_Skill[]"><br>
+    <input type="text" maxlength="25" name="signup_Skill[]"><br>
   	<p><input type="submit" value="決定"></p>
     </form>
     <hr>
