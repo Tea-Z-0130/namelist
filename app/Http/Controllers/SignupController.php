@@ -46,6 +46,10 @@ class SignupController extends Controller
 
         foreach( $request->input('signup_Skill') as $item )
         {
+            if( $item == '' )
+            {
+                continue;
+            }
             $skill = new Skill();
             $skill->skill_Name = $item;
             $skill->user_ID = $user->user_ID;
